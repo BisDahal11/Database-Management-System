@@ -1,0 +1,276 @@
+<html>
+<head>
+<title>
+    	Database Management System
+</title>
+<style>
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.7;
+  }
+
+  .toc {
+    background-color: #f0f8ff;
+    border-left: 4px solid #007acc;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+
+  .section:hover {
+    background-color: #f9fbfd;
+  }
+</style>
+</head>
+<body>
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#data">1. Data</a></li>
+    <li><a href="#intro">2. Introduction of DBMS</a></li>
+    <li><a href="#file-vs-dbms">3. File System vs DBMS</a></li>
+    <li><a href="#advantages">4. Advantages and Disadvantages</a></li>
+    <li><a href="#data-models">5. Data Models</a></li>
+    <li><a href="#terminologies">6. Database Terminologies</a></li>
+    <li><a href="#er-model">7. Entity Relationship (ER) Model</a></li>
+    <li><a href="#relational">8. Relational Database Concepts</a></li>
+    <li><a href="#sql">9. Structured Query Language (SQL)</a></li>
+    <li><a href="#applications">10. Applications of DBMS</a></li>
+  </ul>
+</div>
+<div id="data" class="section">
+   <h3>   DATA   </h3>
+     <p>Data is a collection of information gathered by observations, measurements, research or analysis. They may consist of facts, numbers, names, figures or even description of things. Data is organized in the form of graphs, charts or 	tables. There exist data scientist who does data mining and with the help of that data analyse our world. </p>
+  Data is classified into
+	<br>Qualitative: It describes the quality of something or someone. It is descriptive information. For example, the skin colour, eye colour, hair texture, etc. gives us the qualitative information about a person. <br>
+Quantitative: It provides numerical information. Example, the height and weight of a person.<br>
+</div>
+<div id="intro" class="section">
+ <h3>	Introduction of DBMS (Database Management System)
+ </h3>
+	A Database Management System (DBMS) is a software solution designed to efficiently manage, organize, and retrieve data in a structured manner. It serves as a critical component in modern computing, enabling organizations to store, manipulate, and secure their data effectively. From small applications to enterprise systems, DBMS plays a vital role in supporting data-driven decision-making and operational efficiency.
+<br>
+<h4>What is a DBMS? </h4>
+A DBMS is a system that allows users to create, modify, and query databases while ensuring data integrity, security, and efficient data access. Unlike traditional file systems, DBMS minimizes data redundancy, prevents inconsistencies, and simplifies data management with features like concurrent access and backup mechanisms. It organizes data into tables, views, schemas, and reports, providing a structured approach to data management. <br>
+
+Example:<br>
+A university database can store and manage student information, faculty records, and administrative data, allowing seamless retrieval, insertion, and deletion of information as required.<br>
+
+<h4>Key Features of DBMS </h4> <br>
+1.Data Modeling: Tools to create and modify data models, defining the structure and relationships within the database. <br>
+2.Data Storage and Retrieval: Efficient mechanisms for storing data and executing queries to retrieve it quickly.<br>
+3.Concurrency Control: Ensures multiple users can access the database simultaneously without conflicts.<br>
+4.Data Integrity and Security: Enforces rules to maintain accurate and secure data, including access controls and encryption.<br>
+5.Backup and Recovery: Protects data with regular backups and enables recovery in case of system failures.<br>
+<h4> Types of DBMS </h4> <br>
+<p> There are several types of Database Management Systems (DBMS), each tailored to different data structures, scalability requirements, and application needs. The most common types are as follows:
+<br>
+1. Relational Database Management System (RDBMS)<br>
+RDBMS organizes data into tables (relations) composed of rows and columns. It uses primary keys to uniquely identify rows and foreign keys to establish relationships between tables. Queries are written in SQL (Structured Query Language), which allows for efficient data manipulation and retrieval.
+<br>
+Examples: MySQL, Oracle, Microsoft SQL Server and Postgre SQL.
+<br>
+2. NoSQL DBMS
+NoSQL systems are designed to handle large-scale data and provide high performance for scenarios where relational models might be restrictive. They store data in various non-relational formats, such as key-value pairs, documents, graphs, or columns. These flexible data models enable rapid scaling and are well-suited for unstructured or semi-structured data.
+<br>
+Examples: MongoDB, Cassandra, DynamoDB and Redis.
+<br>
+3. Object-Oriented DBMS (OODBMS)<br>
+OODBMS integrates object-oriented programming concepts into the database environment, allowing data to be stored as objects. This approach supports complex data types and relationships, making it ideal for applications requiring advanced data modeling and real-world simulations.
+<br>
+Examples: ObjectDB, db4o.</p>
+</div>
+<div id="file-vs-dbms" class="section">
+<h3> Difference between File System and DBMS </h3>
+<p> A file system and a DBMS are two kinds of data management systems that are used in different capacities and possess different characteristics. A File System is a way of organizing files into groups and folders and then storing them in a storage device. It provides the media that stores data as well as enables users to perform procedures such as reading, writing, and even erasure.
+<br>
+On the other hand, DBMS is a more elaborate software application that is solely charged with the responsibility of managing large amounts of structured data. It provides functionalities such as query, index, transaction, as well as data integrity. Although the file system serves well for the purpose of data storage for applications where data is to be stored simply and does not require any great organization, DBMS is more appropriate for applications where data needs to be stored and optimized for organizational and structural needs, security, etc. </p>
+<h3> File System </h3>
+<p>The file system is basically a way of arranging the files in a storage medium like a hard disk. The file system organizes the files and helps in the retrieval of files when they are required. File systems consist of different files which are grouped into directories. The directories further contain other folders and files. The file system performs basic operations like management, file naming, giving access rules, etc.
+<br> Example: NTFS(New Technology File System) , EXT(Extended File System). </p>
+</div>
+<div id="advantages" class="section">
+<h3> Advantages and disadvantages of DBMS </h3>
+<br>
+<p> DBMS has a wide variety of advantages that make it very desirable for a myriad of companies. These include:
+<br>
+1. Improved data security <br>
+Data security measures are very important for any organization. To ensure high data security, companies use DBMS as it provides various levels of security authentication which can be done at the user and admin levels. This helps to avoid security breaches and takes care of the security issues.
+<br>
+2. Data retrieval <br>
+DBMS provides a platform that is time-saving and easy to use for organizations. Data can be stored and retrieved quickly and securely within time constraints. <br>
+
+3. Minimum data inconsistency <br>
+Data inconsistency occurs when there are different versions of the same data stored at different places. For example, data inconsistency exists when let’s say a school’s database has the name of the Principal as 'Raman Desai' at one place and it’s 'Naman Desai' at the other place. Here, there’s an inconsistency as the principal is the same and it should be the same at all places in a database. Such errors are highly minimized in a properly designed DBMS.
+<br>
+4. Improved decision making <br>
+DBMS provides high data quality by minimizing data inconsistency and improving data security. This ensures that there are fewer errors and high accuracy rate is maintained. Thus, DBMS helps businesses to improve upon their decisions that are backed by the data in a DBMS.
+<br>
+5. Better data sharing facility <br>
+DBMS ensures that database users have access to the data. They can see the data and the changes happening in that data. Then, the end-users can also respond quickly to such updates in the database.
+<br>
+6. Improved data integration <br>
+DBMS gives companies an integrated view of their organization’s operations and departments. It helps companies to see how one segment of their company is affecting the other one.
+<br>
+7. Good data back-up <br>
+Imagine yourself working on an important task, and suddenly the system crashes. How would you feel? Obviously, you’ll get angry and irritated. In the case of organizations, they can’t afford such errors. So, in such cases, DBMS comes to their rescue by enabling data recovery and backup. </p>
+<p>
+Apart from the advantages, there are a few demerits of using DBMS. Let’s have a look at some of the important ones:
+<br>
+1. DBMS is expensive <br>
+DBMS requires highly professional staff, sophisticated hardware and software that makes it quite expensive to implement and maintain. Also, training costs for staff and licensing costs are significant ones that add to the total cost of DBMS operations. Thus, heavy investment in database technology results in DBMS being expensive.
+<br>
+2. Complexity issues <br>
+DBMS is very complex to operate and manage. It requires skilled personnel to maintain, so it’s difficult for non-technical people to understand its working. If one doesn’t use DBMS properly, then there can be system failure issues. These issues can lead to database failure or data loss.
+<br>
+3. Not beneficial for small firms <br>
+DBMS is designed to be useful for large organizations. Generally, traditional file systems work better for small-scale firms as compared to DBMS. This is because the performance of DBMS is slow for small firms. Also, it’s quite expensive for them to use DBMS.
+<br>
+4. Frequent upgrade issue <br>
+As updates occur in a system, new features are added to its functionality. This makes it necessary for staff to learn about these software and hardware upgrades. As in today’s world, changes occur rapidly, so it takes time, effort, and cost for organizations to train their staff. </p>
+<div id="data-models" class="section">
+<h3> Data Models </h3>
+<P> The Data Model gives us an idea of how the final system would look after it has been fully implemented. It specifies the data items as well as the relationships between them. In a database management system, data models are often used to show how data is connected, stored, accessed, and changed. We portray the information using a set of symbols and language so that members of an organisation may understand and comprehend it and then communicate. </P>
+<h4> Types of Data Models in DBMS </h4>
+<p> Though there are other data models in use today, the Relational model is the most used. Aside from the relational model, there are a variety of different data models that we shall discuss in-depth in this article. Data Models in DBMS include the following:</p>
+<p> <h5> Hierarchical Model </h5> <br>
+This concept uses a hierarchical tree structure to organise the data. The hierarchy begins at the root, which contains root data, and then grows into a tree as child nodes are added to the parent node. </p>
+<p>
+<h5>Network Model </h5>
+<br>
+The main difference between this model and the hierarchical model is that any record can have several parents in the network model. It uses a graph instead of a hierarchical tree. </p>
+<p><h5. Relational Model </h5>
+<br> The data in this model is kept in the form of a table that is two-dimensional. All of the data is kept in the form of rows and columns. Tables are the foundation of a relational paradigm.
+ </p>
+</div>
+<div id="terminologies" class="section">
+<p>
+Database | A structured collection of data, typically stored electronically in a  computer system. <br>
+Table | A collection of data in a database, organised into rows and columns.<br>
+Column | A vertical entity in a table that contains all information associated with a specific field in the database. <br>
+Field | A single piece of data in a record, equivalent to a column in a relational database table.<br>
+Row/Record | A single, horizontally stored data entity in a table, which contains fields corresponding to columns.<br>
+Primary Key | A unique identifier for each record in a database table, crucial for ensuring data uniqueness and integrity.<br>
+Foreign Key | A field (or collection of fields) in one table, that uniquely identifies a row of another table. It's a key used to link two tables together. <br>
+Flat-File Database | A simple database system in which each database is contained in a single table, often stored as a plain text file. <br>
+Relational Database | A type of database that stores and provides access to data points that are related to one another. <br>
+Data Type | An attribute that specifies the type of data that a column can hold (e.g., integer, text, date/time). <br>
+Query | A request to access data from a database, often written in a specific language like SQL. <br>
+Data Integrity | The accuracy and consistency of data stored in a database.<br>
+Index | A database structure that improves the speed of data retrieval operations on a database table. <br>
+Aggregate Function | A function in SQL that performs a calculation on a set of values and returns a single value, often used in data analysis. <br>
+Data Redundancy | The repetition of data within a database, which can lead to inconsistencies and increased  storage requirements. <br>
+Data Privacy | The aspect of database management that deals with handling and securing personal or sensitive data. <br>
+Data Security | Measures and techniques used to protect database information from unauthorized access or corruption. <br>
+Backup | The process of creating a copy of data stored in a database, used for data recovery in case of data loss. <br>
+Transaction | A sequence of database operations that are treated as a single unit, often used to maintain data integrity. <br>
+</p>
+
+</div>
+<div id="er-model" class="section">
+<h3> Entity Relationship (ER) Model </h3>
+<p>
+The Entity-Relationship Model (ER Model) is a conceptual model for designing a databases. This model represents the logical structure of a database, including entities, their attributes and relationships between them.
+<br>
+Entity: An objects that is stored as data such as Student, Course or Company. <br>
+Attribute: Properties that describes an entity such as StudentID, CourseName, or EmployeeEmail. <br>
+Relationship: A connection between entities such as "a Student enrolls in a Course". <br>
+</p>
+</div>
+<div id="relational" class="section">
+<h3> Relational Database Concepts </h3>  <p> A relational database is a collection of information that organizes data in predefined relationships where data is stored in one or more tables (or "relations") of columns and rows, making it easy to see and understand how different data structures relate to each other. Relationships are a logical connection between different tables, established on the basis of interaction among these tables. </p>
+<p> <h4> The relational database model </h4> <br> Developed by E.F. Codd from IBM in the 1970s, the relational database model allows any table to be related to another table using a common attribute. Instead of using hierarchical structures to organize data, Codd proposed a shift to using a data model where data is stored, accessed, and related in tables without reorganizing the tables that contain them.
+
+Think of the relational database as a collection of spreadsheet files that help businesses organize, manage, and relate data. In the relational database model, each “spreadsheet” is a table that stores information, represented as columns (attributes) and rows (records or tuples). 
+
+Attributes (columns) specify a data type, and each record (or row) contains the value of that specific data type. All tables in a relational database have an attribute known as the primary key, which is a unique identifier of a row, and each row can be used to create a relationship between different tables using a foreign key—a reference to a primary key of another existing table. </p>
+</div>
+<div id="sql" class="section">
+<h3> Structured Query Language (SQL) </h3> <br> <br>
+<h4> What is SQL? </h4>
+<p> SQL stands for Structured Query Language
+SQL lets you access and manipulate databases
+SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987
+</p>
+<h4> What Can SQL do? </h4>
+<p> SQL can execute queries against a database.
+SQL can retrieve data from a database.
+SQL can insert records in a database.
+SQL can update records in a database.
+SQL can delete records from a database.
+SQL can create new databases.
+SQL can create new tables in a database.
+SQL can create stored procedures in a database.
+SQL can create views in a database.
+SQL can set permissions on tables, procedures, and views. </p>
+
+</div>
+<div id="applications" class="section">
+<h3> Applications of Database Management System </h3>
+<p> The efficient and safe management, saving and retrieval of data is made possible by the Database Management Systems. They provide strong solutions for the data management demands and are the foundation of the numerous applications used in a variety of the sectors. Recognizing the uses of DBMSs aids in understanding their significance in contemporary company operations and technology </p>
+<p>
+. Railway Reservation System <br>
+In the rail route reservation framework, the information base is needed to store the record or information of ticket appointments, status of train's appearance, and flight. Additionally, if trains get late, individuals become acquainted with it through the information base update.  
+<br>
+2. Library Management System <br>
+There are many books in the library so; it is difficult to store the record of the relative multitude of books in a register or duplicate. Along these lines, the data set administration framework (DBMS) is utilized to keep up all the data identified with the name of the book, issue date, accessibility of the book, and its writer.  
+<br>
+3. Banking <br>
+Database the executive's framework is utilized to store the exchange data of the client in the information base.
+<br>
+4. Education Sector <br>
+Presently, assessments are led online by numerous schools and colleges. They deal with all assessment information through the data set administration framework (DBMS). In spite of that understudy's enlistments subtleties, grades, courses, expense, participation, results, and so forth all the data is put away in the information base.  
+<br>
+5. Credit card exchanges <br>
+The database Management framework is utilized for buying on charge cards and age of month to month proclamations.  
+<br>
+6. Social Media Sites <br>
+We all utilization of online media sites to associate with companions and to impart our perspectives to the world. Every day, many people group pursue these online media accounts like Pinterest, Facebook, Twitter, and Google in addition to. By the utilization of the data set administration framework, all the data of clients are put away in the information base and, we become ready to interface with others.  
+<br>
+7. Broadcast communications<br>
+Without DBMS any media transmission organization can't think. The Database the executive's framework is fundamental for these organizations to store the call subtleties and month to month postpaid bills in the information base.  
+<br>
+8. Accounting and Finance <br>
+The information base administration framework is utilized for putting away data about deals, holding and acquisition of monetary instruments, for example, stocks and bonds in a data set. 
+<br>
+9. E-Commerce Websites <br>
+These days, web-based shopping has become a major pattern. Nobody needs to visit the shop and burn through their time. Everybody needs to shop through web based shopping sites, (for example, Amazon, Flipkart, Snapdeal) from home. So all the items are sold and added uniquely with the assistance of the information base administration framework (DBMS). Receipt charges, installments, buy data these are finished with the assistance of DBMS.  
+<br>
+10. Human Resource Management <br>
+Big firms or organizations have numerous specialists or representatives working under them. They store data about worker's compensation, assessment, and work with the assistance of an information base administration framework (DBMS).  
+<br>
+11. Manufacturing <br>
+Manufacturing organizations make various kinds of items and deal them consistently. To keep the data about their items like bills, acquisition of the item, amount, inventory network the executives, information base administration framework (DBMS) is utilized.
+<br>
+12. Airline Reservation System <br>
+This framework is equivalent to the railroad reservation framework. This framework additionally utilizes an information base administration framework to store the records of flight takeoff, appearance, and defer status. 
+<br>
+13. Healthcare System <br>
+DBMS is used in healthcare to manage patient data, medical records, and billing information.
+<br>
+14. Security <br>
+DBMS provides security features to ensure that only authorized users have access to the data.
+<br>
+15. Telecommunication <br>
+Database Management Systems (DBMS) are essential to the telecommunications industry because they manage enormous volumes of data on billing, customer information, and network optimization. </p>
+</div>
+</body>
+</html>
